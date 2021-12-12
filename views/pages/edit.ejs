@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<body>
+    <div class="container">
+      <h1 class="mb-4">New note</h1>
+        <form action="/edit/<%= model.id_p %>" method="POST" id="contactform" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="Nama">Nama Produk</label>
+                <input type="text" name="Nama" placeholder="Nama Produk" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="Jumlah">Jumlah Produk</label>
+                <input type="text" name="Jumlah" placeholder="Jumlah Produk" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="Harga">Harga Produk</label>
+                <input type="text" name="Harga" placeholder="Harga Produk" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="Deskripsi">Deskripsi Produk</label>
+                <input type="text" name="Deskripsi" placeholder="Deskripsi Produk" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="gambar">Gambar Produk</label>
+                <input type="file" name="gambar" class="form-control"/>
+            </div>
+            
+            <a href="/admin" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</body>

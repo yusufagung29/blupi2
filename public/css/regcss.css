@@ -1,0 +1,10 @@
+form button{
+   border: none; 
+   padding: 10px; 
+   border-radius: 15px; 
+   color: white;
+   background-color:#ff94f4 ;
+   transition: 0.3s;
+}
+form button:hover{
+   background-color: #90a0f8;}

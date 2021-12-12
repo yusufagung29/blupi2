@@ -1,0 +1,20 @@
+.account-main-container{
+    padding: 20px;
+    width: 30%;
+    background-color: white;
+}
+.first-account-container{
+    display: flex;
+}
+.first-account-container-flex{
+    margin : 20px;
+}
+.first-account-container img{
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.second-account-container{
+    margin-left: 20px;
+}

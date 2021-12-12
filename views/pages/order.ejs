@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
+		<meta charset="UT-8">
+		<meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+		<title>Blupi Child Corner</title>
+		<link href="css/index.css" rel="stylesheet"/>
+		<link href="css/admin.css" rel="stylesheet"/>
+		<script src="https://kit.fontawesome.com/dd1aed35c1.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link href='https://css.gg/css' rel='stylesheet'>
+	</head>
+	<body>
+		<script>
+			var i = 0
+		</script>
+		<main>
+		<div class="navcontainer">
+			<span id="navstart">
+				<a href="/dashboard"><img src="images/logotokotrans.png" alt="cart"></a>
+				<div class="search">
+					<div class="icon"></div>
+					<div class="input">
+						<input type="text" placeholder="Cari Barang" id="mysearch">
+					</div>
+				</div>
+				<script>
+					const icon = document.querySelector('.icon');
+					const search = document.querySelector('.search');
+					icon.onclick = function(){
+						search.classList.toggle('active')
+					}
+				</script>
+			</span>
+			<span id="navend">
+				<div class="imgcontainer" style="background-image:account-img/<%=user.image%>;">
+				</div>
+				<a href="/admin" name="username" style="background-color: transparent;"><p>Welcome, <b>ADMIN</b></p></a>
+				<a href="/order" style="background-color: transparent;">
+				<img src="svg/assignment_white_24dp.svg" alt=""></a>
+				<a href="/create" style="background-color: transparent;">
+				<img src="svg/note_add_white_24dp.svg" alt=""></a>
+				<a href="/logout" style="background-color: transparent;"><img src="
+					svg/logout_white_24dp.svg" alt=""></a>
+			</span>
+		</div>
+			<div class="contentflex" style="height: 100vh;">
+				<div class="admin-main-container" style="height: 100vh;">
+					<h3 style="color: rgb(177, 177, 177);">Pesanan</h3>
+					<a href="/admin" style="text-decoration: none; color: rgb(207, 207, 207);">Kembali</a>
+                    <table style="text-align: center;">
+                        <tr>
+                            <th>Id Pesanan</th>
+                            <th>Nama Consignee</th>
+                            <th>Alamat pengiriman</th>
+                            <th></th>
+                        </tr>
+                        <% model.forEach (product => { %>
+                            <tr>
+                                <td><%=product.id_order%></td>
+                                <td><%=product.nama_p%></td>
+                                <td><%=product.alamat_p%></td>
+                                <td>
+                                    <a href="/order/<%=product.id_order%>">Detail</a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </table>
+
+					
+				</div>
+			</div>
+
+		</main>	
+		<footer>
+			<div class="footercontainer">
+			<h4>Follow us</h4>
+			<div class="footerfelx"></div>
+				<a href="#"><span class="circlef"><div class="gg-instagram"></div></span></a>
+				<a href="#"><span class="circlef"><div class="gg-facebook"></div></span></a>
+				<a href="#"><span class="circlef"><s><div class="gg-phone"></div></s></span></a>
+			</div>
+		</footer>
+	</div>
+	</body>
+</html>

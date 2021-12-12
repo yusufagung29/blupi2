@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="shortcut icon" href="Favicon/favicon.ico" type="image/x-icon">
+		<meta charset="UT-8">
+		<meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+		<title>Blupi Child Corner</title>
+		<link href="css/index.css" rel="stylesheet"/>
+		<link href="css/second.css" rel="stylesheet"/>
+		<script src="https://kit.fontawesome.com/dd1aed35c1.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link href='https://css.gg/css' rel='stylesheet'>
+	</head>
+	<body>
+		<script>
+			var i = 0
+		</script>
+		<main>
+		<div class="navcontainer">
+			<span id="navstart">
+				<a href="/"><img src="images/logotokotrans.png" alt="cart"></a>
+				<div class="search">
+					<div class="icon"></div>
+					<div class="input">
+						<input type="text" placeholder="Cari Barang" id="mysearch">
+					</div>
+				</div>
+				<script>
+					const icon = document.querySelector('.icon');
+					const search = document.querySelector('.search');
+					icon.onclick = function(){
+						search.classList.toggle('active')
+					}
+				</script>
+			</span>
+			<span id="navend">
+				<div class="imgcontainer">
+				</div>
+				<a href="/admin" name="username" style="background-color: transparent;"><p>Welcome, <b>ADMIN</b></p></a>
+				<a href="/order" style="background-color: transparent;">
+				<img src="svg/assignment_white_24dp.svg" alt=""></a>
+				<a href="/create" style="background-color: transparent;">
+				<img src="svg/note_add_white_24dp.svg" alt=""></a>
+				<a href="/logout" style="background-color: transparent;"><img src="
+					svg/logout_white_24dp.svg" alt=""></a>
+			</span>
+		</div>
+		</div>
+			<div class="contentflex" style="height: 100vh;" >
+				<div class="account-main-container">
+					<h3 style="color:rgb(204, 204, 204)">Menambahkan Produk</h3>
+						<div class="first-account-container-flex">
+                            <form action="/create" method="post" enctype="multipart/form-data">
+                                <div class="accountcontrol">
+                                    <label for="Nama"style="font-size: smaller; font-weight: lighter;">Nama Produk</label>
+                                    <input type="text" name="Nama" id="Nama"/>
+                                </div>
+                                <div class="accountcontrol">
+                                    <label for="Jumlah"style="font-size: smaller; font-weight: lighter;">Jumlah</label>
+                                    <input type="text" name="Jumlah" id="Jumlah"/>
+                                </div>
+                                <div class="accountcontrol">
+                                    <label for="Harga"style="font-size: smaller; font-weight: lighter;">Harga</label>
+                                    <input type="text" name="Harga" id="Harga"/>
+                                </div>
+                                <div class="accountcontrol">
+                                    <label for="Deskripsi"style="font-size: smaller; font-weight: lighter;">Deskripsi</label>
+                                    <input type="text" name="Deskripsi" id="Deskripsi"/>
+                                </div>
+                                <div class="accountcontrol">
+                                    <label for="gambar1" style="font-size: smaller; font-weight: lighter; cursor: pointer;" id="gambar">
+                                        <input type="file" name="gambar" id = "gambar1"/>
+                                        Upload Foto Barang
+                                    </label>		
+                                </div>
+                                <div class="accountcontrol">
+                                    <label for="account-sbmt" style="text-align: center; cursor: pointer;">
+                                        <img src="images/Eo_circle_green_checkmark.svg.png" alt="" style="width: 50px;">
+                                        <button name="account-sbmt" id="account-sbmt" style="display: none;" type="submit">Submit</button>	
+                                    </label>	
+                                </div>
+                            </form>
+						</div>
+					</div>
+					<div class="second-account-container">
+					</div>
+				</div>	
+		</main>	
+		<footer>
+			<div class="footercontainer">
+			<h4>Follow us</h4>
+			<div class="footerfelx"></div>
+				<a href="#"><span class="circlef"><div class="gg-instagram"></div></span></a>
+				<a href="#"><span class="circlef"><div class="gg-facebook"></div></span></a>
+				<a href="#"><span class="circlef"><s><div class="gg-phone"></div></s></span></a>
+			</div>
+		</footer>
+	</div>
+	</body>
+</html>
